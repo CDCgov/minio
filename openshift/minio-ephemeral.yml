@@ -77,8 +77,8 @@ objects:
           args:
           - server
           - --config-dir
-          - /data/.minio
-          - /data
+          - /export/.minio
+          - /export
           livenessProbe:
             initialDelaySeconds: 30
             tcpSocket:
@@ -101,14 +101,14 @@ objects:
             privileged: false
           terminationMessagePath: /dev/termination-log
           volumeMounts:
-          - mountPath: /data
-            name: data
+          - mountPath: /export
+            name: export
         dnsPolicy: ClusterFirst
         restartPolicy: Always
         volumes:
         - emptyDir:
             medium: ""
-          name: data
+          name: export
     triggers:
     - imageChangeParams:
         automatic: true
