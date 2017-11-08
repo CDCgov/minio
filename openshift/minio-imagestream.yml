@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Minio
+  name: ocp-minio
+spec:
+  dockerImageRepository: "minio/minio"
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: minio:latest
+    importPolicy: {}
+    name: latest
+
