@@ -23,8 +23,6 @@ EXPOSE 9000
 
 ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
 
-CMD ["touch /tmp/testfile.txt"]
-
 VOLUME ["/export"]
 
 HEALTHCHECK --interval=30s --timeout=5s \
