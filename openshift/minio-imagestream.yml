@@ -10,7 +10,19 @@ spec:
   - annotations: null
     from:
       kind: DockerImage
-      name: minio:latest
+      name: minio/minio:RELEASE.2017-10-27T18-59-02Z
+    importPolicy: {}
+    name: "RELEASE.2017-10-27T18-59-02Z"
+  - annotations: null
+    from:
+      kind: ImageStreamTag
+      name: "RELEASE.2017-10-27T18-59-02Z"
     importPolicy: {}
     name: latest
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: minio/minio:edge
+    importPolicy: {}
+    name: edge
 

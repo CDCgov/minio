@@ -168,9 +168,9 @@ parameters:
   displayName: Name of Minio Image
   name: MINIO_IMAGE
   value: ocp-minio
-- description: Version of Minio image to be used (latest).
+- description: Version of Minio image to be used (RELEASE.2017-10-27T18-59-02Z, latest, or edge).
   displayName: Version of Minio Image
   name: MINIO_VERSION
   required: true
-  value: "latest"
+  value: "RELEASE.2017-10-27T18-59-02Z"
 
